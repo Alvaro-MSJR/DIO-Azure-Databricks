@@ -11,7 +11,11 @@
 
  > **Objetivo:** Este é o repositório desenvolvido durante o curso BootCamp Azure Databricks na plataforma da [DIO](https://dio.me)
 
-Projeto com o objetivo de gerar evidência do conhecimento absorvido no treinamento Monitoramento de Custos no Data Factory
+Projeto com o objetivo de gerar evidência do conhecimento absorvido no <b>treinamento do módulo:</b>
+
+  ### Explorando o Recursos Azure.
+Como referência usaremos o contéudo do tópico  :
+* Criando os Recursos com a Estruturação de uma Infra Completa
 
 
 ## 💻 Tecnologias utilizadas no projeto
@@ -40,21 +44,24 @@ e como você os obteve deixando claro o seu racional, para isso faça da seguint
 
   1) Neste desafio navegamos de forma básica pela interface do Azure.
   2) Não usamos uma conta de estudande, usamos uma contra free por 30 dias.
-  3) Veremos os prints de passo a passo da criação da conta e a criação de um recurso que no caso e o Data Fabric
-  4) Alteramos o idioma para inglês durante o processo de criação de subscription (assinatura)
-     Na imagem vemos 2 assinaturas, porém a selecionada e a Default.
-     <p align="left">
-       <img width="400" src="asset/1_Assinatura_azure.jpg">
-     </p>
-  5) Na figura abaixo vemos o Dashboard Principal (Painel) customizado, com as seguintes features:
-     Recurso: Data factory
-              Horario local
-              Metrica de Segurança
-              Metrica de Contagem de Pipelines executados
-      <p align="left">
-       <img width="400" src="asset/2_DashboardPrincipal.jpg">
-      </p>
-  6) Agora vemos as features da criação do Data Factory
+  3) Veremos os prints de passo a passo de:
+     Criação de recursos, como:
+        * Data Fabric
+        * Data Factory
+        * Data Lake Storage 
+        * Events Hubs
+        * Container Apps Enviroments
+        * Container Instances
+        * Kubernets Service
+        * SQL Database
+
+    Atenção : A nossa função e de configuração do ambiente com os dados que são fornecidos pela Arquitetura.
+    Nos como engenheiro de dados, iremos pegar a definição lógica da arquitetura e implementar no ambiente do Microsoft Azure.
+    Iremos usar um
+  4) Criação e configuração do Data Fabric
+  5) Criação e configuração do Data Lake
+   
+  6) Criação e configuração do Data Factory
  
      Seguimos a boa pratica descrita em recomendações de abreviações
      <a href="https://learn.microsoft.com/pt-br/azure/cloud-adoption-framework/ready/azure-best-practices/resource-abbreviations" title="Recomendações de Abreviações"> 📕Clique aqui para ler</a>
@@ -62,7 +69,7 @@ e como você os obteve deixando claro o seu racional, para isso faça da seguint
        <img width="400" src="asset/3_DashboardPrincipal_ADF.jpg">
       </p>
 	  
-  7) Vamos ver agora as features do recursos Data Factory.
+  6.1) Vamos ver agora as features do recursos Data Factory.
      Temos a tela principal com um "overview" de todas as possiveis configurações
 
       <p align="left">
@@ -104,7 +111,7 @@ e como você os obteve deixando claro o seu racional, para isso faça da seguint
       </p>
 	  
   
-  8) O que vimos nesta introdução ao Microsoft Azure e como é o processo de configuração dos recursos e suas propriedades.
+  14) O que vimos nesta introdução ao Microsoft Azure e como é o processo de configuração dos recursos e suas propriedades.
 	 Podemos constatar a gama bem diversificada e robusta da solução de nuvem publica que e o Microsoft Azure.
 	 Iremos explorar um pouco mais de configurações nas próximas atuaizações.
      
