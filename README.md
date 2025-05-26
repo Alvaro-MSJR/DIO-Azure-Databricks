@@ -45,14 +45,45 @@ e como você os obteve deixando claro o seu racional, para isso faça da seguint
   1) Neste desafio navegamos de forma básica pela interface do Azure.
   2) Não usamos uma conta de estudande, usamos uma contra free por 30 dias.
   3) Veremos os prints de passo a passo de:
+
      Criação de recursos, como:
-        * Data Fabric
+
+        * Grupo de Recurso
+            <p> &nbsp;&nbsp;&nbsp; Dedicado ao projeto, que no caso ira demonstrar uma implementacao de arquitetura.</p>
+
         * Data Factory
-        * Data Lake Storage 
+            </p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Contém os recursos de dados e outros que iremos manipular.
+            È uma das fontes de entrada</p>
         * Events Hubs
+           <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Contém os recursos de dados e outros que iremos manipular.</p>
+           <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  É uma das fontes de entrada</p>
+           <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Pontos de atenção e a parte de segurança e thruput </li></p>
+
+        * Azure Databrikcs Service
+          <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Iremos manipular os dados e gerar novos ou apenas sanitizar os dados.</p>
+
+        * Data Lake Storage 
+           <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Pontos importantes:</p>
+           <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Saber o que será armazenado, pois no campo "primary service" seremos</p>
+           <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; questionados, com isto e importante ver o que o arquiteto realmente almeja para este recurso. Para este recurso iremos criar um ADLS</p>
+            <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Saber o comportamento da rede e um ponto importante, como ficará disponivel o Data Lake.</p>
+
+        * Storage Account
+           <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Apos a criação iremos configurar:</p>
+             <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Controle de Acesso</p>
+             <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Quem tem acesso e a que e qual o nivel.</p>
+             <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Containers ( Pastas) </p>
+             <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Que irá descrever/informar o status dos dados armazenados. Exemplo bronze, prata, ouro. que segue a linha de um dado sem tratamento, semi tratado e tratado.</p>
+             <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Filas</p>
+             <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Emfim a estrutura definida pela arquitetura.</p>
+
+        * Azure Machine Learning
+            <p> &nbsp;&nbsp;&nbsp; Que ira processar os nossos dados de entrada de forma a gerar, seja insights</p>
+            <p> &nbsp;&nbsp;&nbsp; ou informações relevantes.</p>
+
+        * Kubernets Service
         * Container Apps Enviroments
         * Container Instances
-        * Kubernets Service
         * SQL Database
 
     Atenção : A nossa função e de configuração do ambiente com os dados que são fornecidos pela Arquitetura.
