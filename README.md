@@ -1,6 +1,6 @@
 
-<p align="left">
-    <img width="200" src="asset/iniciorapido.jpg">
+<p align="center">
+    <img width="250" src="asset/iniciorapido.jpg">
 </p>
 <p align="left"><h1> # DIO-Azure-Databricks  </h1></p>
 <p align="center"><h1>BootCamp : Azure Databricks </h1></p>
@@ -44,108 +44,98 @@ e como você os obteve deixando claro o seu racional, para isso faça da seguint
 
   1) Neste desafio navegamos de forma básica pela interface do Azure.
   2) Não usamos uma conta de estudande, usamos uma contra free por 30 dias.
-  3) Veremos os prints de passo a passo de:
+  3) Iremos procurar seguir o desenho da arquitetura (imagem abaixo)
+      <p align="center">
+       <img width="400" src="asset/desenho_arquitetura.JPG">
+      </p>
+      <p>&emsp;&emsp;&emsp;&emsp;&nbsp;<b><h4>Não iremos implementar em sua integralidade, somente alguns recursos, visto que não temos também
+      em sua integralidade a descrição de arqtuitetura e ainda não temos os recursos como banco de dados local instalado.</h4></b></p>
 
-     Criação de recursos, como:
+  4) Veremos os prints do passo a passo da Criação dos recursos, como:
 
         * Grupo de Recurso
-            <p> &nbsp;&nbsp;&nbsp; Dedicado ao projeto, que no caso ira demonstrar uma implementacao de arquitetura.</p>
+            <p> &emsp; Dedicado ao projeto, que no caso ira demonstrar uma implementacao de arquitetura.</p>
+
+            <p align="center">
+            <img width="400" src="asset/01_Grupo_Recurso.JPG">
+            </p>
 
         * Data Factory
-            </p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Contém os recursos de dados e outros que iremos manipular.
+            </p> &emsp;&nbsp;&nbsp; Contém os recursos de dados e outros que iremos manipular.
             È uma das fontes de entrada</p>
+
+            <p align="center">
+            <img width="400" src="asset/05_Azure_Factory.JPG">
+            </p>
+
         * Events Hubs
-           <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Contém os recursos de dados e outros que iremos manipular.</p>
-           <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  É uma das fontes de entrada</p>
-           <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Pontos de atenção e a parte de segurança e thruput </li></p>
+           <p> &emsp;&nbsp;&nbsp;  Contém os recursos de dados e outros que iremos manipular.</p>
+           <p> &emsp;&nbsp;&nbsp;  É uma das fontes de entrada</p>
+           <p> &emsp;&nbsp;&nbsp;  Pontos de atenção e a parte de segurança e thruput </li></p>
+
+            <p align="center">
+            <img width="400" src="asset/03_Event_hubs.JPG">
+            </p>
 
         * Azure Databrikcs Service
-          <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Iremos manipular os dados e gerar novos ou apenas sanitizar os dados.</p>
+          <p> &emsp; Iremos manipular os dados e gerar novos ou apenas sanitizar os dados.</p>
+
+            <p align="center">
+            <img width="400" src="asset/02_Azure_DataBricks_Service.JPG">
+            </p>
 
         * Data Lake Storage 
-           <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Pontos importantes:</p>
-           <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Saber o que será armazenado, pois no campo "primary service" seremos</p>
-           <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; questionados, com isto e importante ver o que o arquiteto realmente almeja para este recurso. Para este recurso iremos criar um ADLS</p>
-            <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Saber o comportamento da rede e um ponto importante, como ficará disponivel o Data Lake.</p>
+           <p> &emsp; Pontos importantes:</p>
+           <p> &emsp;&nbsp;&nbsp; Saber o que será armazenado, pois no campo "primary service" seremos</p>
+           <p> &emsp;&nbsp;&nbsp; questionados, com isto e importante ver o que o arquiteto realmente almeja para este recurso. Para este recurso iremos criar um ADLS</p>
+            <p> &emsp;&nbsp;&nbsp;  Saber o comportamento da rede e um ponto importante, como ficará disponivel o Data Lake.</p>
 
         * Storage Account
-           <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Apos a criação iremos configurar:</p>
-             <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Controle de Acesso</p>
-             <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Quem tem acesso e a que e qual o nivel.</p>
-             <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Containers ( Pastas) </p>
-             <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Que irá descrever/informar o status dos dados armazenados. Exemplo bronze, prata, ouro. que segue a linha de um dado sem tratamento, semi tratado e tratado.</p>
-             <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Filas</p>
-             <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Emfim a estrutura definida pela arquitetura.</p>
+           <p> &emsp; Apos a criação iremos configurar:</p>
+            
+            <p align="center">
+            <img width="400" src="asset/06_Storage_Account.JPG">
+            </p>
+
+             <p>&emsp;&nbsp;&nbsp;  Controle de Acesso</p>
+             <p>&emsp;&nbsp;&nbsp;&nbsp;&nbsp;  Quem tem acesso e a que e qual o nivel.</p>
+            
+             <p> &emsp;&nbsp;&nbsp; Containers ( Pastas) </p>
+             <p> &emsp;&nbsp;&nbsp;&nbsp;&nbsp; Que irá descrever/informar o status dos dados armazenados. Exemplo bronze, prata, ouro. que segue a linha de um dado sem tratamento, semi tratado e tratado.</p>
+            <p align="center">
+            <img width="400" src="asset/06_Storage_Account_Containers.JPG">
+            </p>
+            
+             <p> &emsp;&nbsp;&nbsp; Filas</p>
+             <p> &emsp;&nbsp;&nbsp;&nbsp;&nbsp; Emfim a estrutura definida pela arquitetura.</p>
 
         * Azure Machine Learning
-            <p> &nbsp;&nbsp;&nbsp; Que ira processar os nossos dados de entrada de forma a gerar, seja insights</p>
-            <p> &nbsp;&nbsp;&nbsp; ou informações relevantes.</p>
+            <p> &emsp; Que ira processar os nossos dados de entrada de forma a gerar, seja insights
+            ou informações relevantes.</p>
 
-        * Kubernets Service
-        * Container Apps Enviroments
-        * Container Instances
+            <p align="center">
+            <img width="400" src="asset/07_Azure_Machine_Learning.JPG">
+            </p>
+
         * SQL Database
+            <p> &emsp; Aqui vemos as principais caracteristicas da confiuração do SQL Database.</p>
 
-    Atenção : A nossa função e de configuração do ambiente com os dados que são fornecidos pela Arquitetura.
-    Nos como engenheiro de dados, iremos pegar a definição lógica da arquitetura e implementar no ambiente do Microsoft Azure.
-    Iremos usar um
-  4) Criação e configuração do Data Fabric
-  5) Criação e configuração do Data Lake
-   
-  6) Criação e configuração do Data Factory
- 
-     Seguimos a boa pratica descrita em recomendações de abreviações
-     <a href="https://learn.microsoft.com/pt-br/azure/cloud-adoption-framework/ready/azure-best-practices/resource-abbreviations" title="Recomendações de Abreviações"> 📕Clique aqui para ler</a>
-      <p align="left">
-       <img width="400" src="asset/3_DashboardPrincipal_ADF.jpg">
-      </p>
-	  
-  6.1) Vamos ver agora as features do recursos Data Factory.
-     Temos a tela principal com um "overview" de todas as possiveis configurações
+            <p align="center">
+            <img width="400" src="asset/08_SQL_Database.JPG">
+            </p>
 
-      <p align="left">
-       <img width="400" src="asset/4_adf_recursos_t1.JPG">
-      </p>
-	  
-	 Temos o "log" de atividades.
-		Demostra o que está sendo feito, passo a passo.
+            <p align="center">
+            <img width="400" src="asset/08_SQL_Database_properties.JPG">
+            </p>
 
+        <h3>Atenção:</h3>
+        <p> &emsp;&nbsp; A nossa função e de configuração do ambiente com os dados que são fornecidos pela Arquitetura.</p>
+        <p> &emsp;&nbsp; Nos como engenheiro de dados, iremos pegar a definição lógica da arquitetura e implementar no ambiente do Microsoft Azure.</p>
+        <p> &emsp;&nbsp; Iremos usar um</p>
 	  
-	 Temos a "Tags" 
-		Que da suporte a gestão de custos dos recursos utilizados
-
-      <p align="left">
-       <img width="400" src="asset/5_adf_recursos_t2_Tags.JPG">
-      </p>
-	  
-	 Temos o "Monitoring"
-		Que no da informações e configurações de alertas, metricas, diagnosticos e logs de acoes de monitoramento.
-
-     Temos o "Settings"
-		Aqui podemos configurar as propriedades do recurso:
-		  Configuração de Rede
-		  Credenciais (Manage Identies)
-		  Propriedades 
-			Que contem :
-			Managed Identity Application ID
-			Managed Identity Tenant
-			Managed Identity Object ID
-			Resource ID
-			Resource group
-			Subscription (assinatura)
-			Tipo recurso e nome
-			Localização
-		  Locks
-		    Que cria acesso ou locks para algumas funcionalidades do recurso.
-      <p align="left">
-       <img width="400" src="asset/6_adf_recursos_t3_Settings_Properties.JPG">
-      </p>
-	  
-  
-  14) O que vimos nesta introdução ao Microsoft Azure e como é o processo de configuração dos recursos e suas propriedades.
-	 Podemos constatar a gama bem diversificada e robusta da solução de nuvem publica que e o Microsoft Azure.
-	 Iremos explorar um pouco mais de configurações nas próximas atuaizações.
-     
+  5) Vimos neste configuração de recursos, algumas definições e propriedades, tal qual definido no desenho técnico da arquitetura.
+	 Pelos prints, podemos constatar a gama bem diversificada e robusta da solução e suas propriedades diversas por recursos.
+	   
 ## 👨‍💻 Desenvolvedor
 
 <p>
